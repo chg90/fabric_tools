@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/shitaibin/fabric-sdk-go-sample/cli"
+	"github.com/chg90/fabric_tools/cli"
 )
 
 const (
@@ -49,10 +49,10 @@ func Phase1(cli1, cli2 *cli.Client) {
 	//}
 	//log.Println("Chaincode has been instantiated")
 	//
-	if _, err := cli1.InvokeCC([]string{peer0Org1}); err != nil {
-		log.Panicf("Invoke chaincode error: %v", err)
-	}
-	log.Println("Invoke chaincode success")
+	//if _, err := cli1.InvokeCC([]string{peer0Org1}); err != nil {
+	//	log.Panicf("Invoke chaincode error: %v", err)
+	//}
+	//log.Println("Invoke chaincode success")
 
 	if err := cli1.QueryCC("peer0.org1.example.com", "a"); err != nil {
 		log.Panicf("Query chaincode error: %v", err)

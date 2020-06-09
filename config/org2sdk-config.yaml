@@ -28,7 +28,7 @@ client:
 #    level: debug
       level: info
   cryptoconfig:
-    path: D:\work\gomod\fabric-sdk-go-sample\crypto-config
+    path: D:\work\gomod\fabric_tools\crypto-config
   # Some SDKs support pluggable KV stores, the properties under "credentialStore"
   # are implementation specific
   credentialStore:
@@ -53,8 +53,8 @@ client:
     # [Optional]. Client key and cert for TLS handshake with peers and orderers
     client:
       # 使用byfn中User1@org2的证书
-      keyfile: D:\work\gomod\fabric-sdk-go-sample\crypto-config\peerOrganizations\org2.example.com\users\User1@org2.example.com\tls\client.key
-      certfile: D:\work\gomod\fabric-sdk-go-sample\crypto-config\peerOrganizations\org2.example.com\users\User1@org2.example.com\tls\client.cert
+      keyfile: D:\work\gomod\fabric_tools\crypto-config\peerOrganizations\org2.example.com\users\User1@org2.example.com\tls\client.key
+      certfile: D:\work\gomod\fabric_tools\crypto-config\peerOrganizations\org2.example.com\users\User1@org2.example.com\tls\client.cert
 
 
 
@@ -148,7 +148,7 @@ organizations:
   Org1:
     mspid: Org1MSP
     # set msp files path
-    cryptoPath: D:\work\gomod\fabric-sdk-go-sample\crypto-config\peerOrganizations\org1.example.com\users\{username}@org1.example.com\msp
+    cryptoPath: D:\work\gomod\fabric_tools\crypto-config\peerOrganizations\org1.example.com\users\{username}@org1.example.com\msp
 
     # Add peers for org1
     peers:
@@ -163,7 +163,7 @@ organizations:
   # fabric-ca registrar enroll ID and secret, etc.
   Org2:
     mspid: Org2MSP
-    cryptoPath: D:\work\gomod\fabric-sdk-go-sample\crypto-config\peerOrganizations\org2.example.com\users\{username}@org2.example.com\msp
+    cryptoPath: D:\work\gomod\fabric_tools\crypto-config\peerOrganizations\org2.example.com\users\{username}@org2.example.com\msp
 
     # Add peers for org2
     peers:
@@ -175,7 +175,7 @@ organizations:
   ordererorg:
     # Membership Service Provider ID for this organization
     mspID: OrdererMSP
-    cryptoPath: D:\work\gomod\fabric-sdk-go-sample\crypto-config\ordererOrganizations\example.com\users\Admin@example.com\msp
+    cryptoPath: D:\work\gomod\fabric_tools\crypto-config\ordererOrganizations\example.com\users\Admin@example.com\msp
 
 
 #
@@ -202,7 +202,7 @@ orderers:
     tlsCACerts:
       # Certificate location absolute path
       # Replace to orderer cert path
-      path: D:\work\gomod\fabric-sdk-go-sample\crypto-config\ordererOrganizations\example.com\tlsca\tlsca.example.com-cert.pem
+      path: D:\work\gomod\fabric_tools\crypto-config\ordererOrganizations\example.com\tlsca\tlsca.example.com-cert.pem
 
 #
 # List of peers to send various requests to, including endorsement, query
@@ -229,7 +229,7 @@ peers:
 
     tlsCACerts:
       # Certificate location absolute path
-      path: D:\work\gomod\fabric-sdk-go-sample\crypto-config\peerOrganizations\org1.example.com\tlsca\tlsca.org1.example.com-cert.pem
+      path: D:\work\gomod\fabric_tools\crypto-config\peerOrganizations\org1.example.com\tlsca\tlsca.org1.example.com-cert.pem
 
   peer0.org2.example.com:
     # Replace the port
@@ -244,4 +244,4 @@ peers:
       #will be taken into consideration if address has no protocol defined, if true then grpc or else grpcs
       allow-insecure: false
     tlsCACerts:
-      path: D:\work\gomod\fabric-sdk-go-sample\crypto-config\peerOrganizations\org2.example.com\tlsca\tlsca.org2.example.com-cert.pem
+      path: D:\work\gomod\fabric_tools\crypto-config\peerOrganizations\org2.example.com\tlsca\tlsca.org2.example.com-cert.pem

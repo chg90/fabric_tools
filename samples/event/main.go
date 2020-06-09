@@ -7,10 +7,10 @@ import (
 
 	"github.com/hyperledger/fabric-sdk-go/pkg/fab/events/deliverclient/seek"
 
+	"github.com/chg90/fabric_tools/cli"
 	"github.com/hyperledger/fabric-sdk-go/pkg/client/event"
 	"github.com/hyperledger/fabric-sdk-go/pkg/common/providers/fab"
 	"github.com/hyperledger/fabric-sdk-go/pkg/fabsdk"
-	"github.com/shitaibin/fabric-sdk-go-sample/cli"
 )
 
 const (
